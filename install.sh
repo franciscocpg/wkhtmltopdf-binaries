@@ -1,6 +1,8 @@
 #!/bin/bash
 set -e
 
+VERSION="0.12.3"
+
 initOSType() {
 	if [[ "$OSTYPE" == *"darwin"* ]]; then
 		OS_TYPE="mac"
@@ -13,5 +15,5 @@ initOSType() {
 }
 
 initOSType
-sudo wget "https://github.com/franciscocpg/wkhtmltopdf-binaries/raw/master/0.12.3/$OS_TYPE/wkhtmltopdf" -P /usr/local/bin
+sudo wget "https://github.com/franciscocpg/wkhtmltopdf-binaries/raw/master/$VERSION/$OS_TYPE/wkhtmltopdf" -P /usr/local/bin
 sudo chmod +x /usr/local/bin/wkhtmltopdf
